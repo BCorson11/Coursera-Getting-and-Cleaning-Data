@@ -67,6 +67,8 @@ subjectmeans <- Total %>%
         group_by(SubjectID, Activity) %>%
         summarise_all(mean)
 
+write.table(subjectmeans, file = "ProjectStep5Output.txt", row.names = FALSE)
+
 View(Total)
 View(summarystats)
 View(subjectmeans)
